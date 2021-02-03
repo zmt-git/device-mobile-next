@@ -1,0 +1,13 @@
+/* miniprogram/pages/mine/mine.wxss */
+.mine{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.r{
+  width: 200rpx!important;
+  height: 200rpx!important;
+  border-radius: 50%!important;
+}

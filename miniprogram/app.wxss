@@ -1,0 +1,32 @@
+/**app.wxss**/
+@import './icon/icon.wxss';
+page {
+  width: 750rpx;
+  height: 100%;
+  font-size: 26rpx;
+  position: relative;
+  --success: rgb(45, 160, 0);
+  --success-light: rgb(202, 255, 181);
+
+  --danger: rgb(218, 79, 79);
+  --danger-light: rgb(255, 208, 208);
+
+  --default: rgb(128, 126, 126);
+  --default-light: rgb(230, 230, 230);
+
+  --warning: rgb(253, 199, 49);
+  --warning-light: rgb(255, 235, 189);
+  
+  --primary: rgb(57, 154, 219);
+  --primary-light: rgb(215, 239, 255);
+}
+.icon{
+  font-size: 36rpx;
+}
+.icon--small{
+  font-size: 26rpx;
+}
+.icon--large{
+  font-size: 46rpx;
+
+}

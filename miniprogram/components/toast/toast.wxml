@@ -1,0 +1,10 @@
+<!--components/toast/toast.wxml-->
+<view
+  class="toast {{type}} {{position}}"
+  animation="{{animationData}}"
+>
+  <view class="icon">
+    <view wx:if="{{defaultIcon}}" class="iconfont {{icon ? icon : iconList[type]}}"></view>
+  </view>
+  <view class="message">{{message}}</view>
+</view>

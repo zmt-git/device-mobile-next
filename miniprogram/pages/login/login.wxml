@@ -1,0 +1,14 @@
+<!--miniprogram/pages/login/login.wxml-->
+<view class="login">
+  <label>
+    <text>用户名</text>
+    <input id='username' bindinput="bindinput" placeholder="请输入用户名"/>
+    <view wx:if="{{usernameMsgShow}}">用户名不能为空</view>
+  </label>
+  <label>
+    <text>密码</text>
+    <input id="password" bindinput="bindinput" type="password" placeholder="请输入密码" />
+    <view wx:if="{{passwordMsgShow}}">密码不能为空</view>
+  </label>
+  <button disabled="{{disabled}}" bindtap="submit">登录</button>
+</view>

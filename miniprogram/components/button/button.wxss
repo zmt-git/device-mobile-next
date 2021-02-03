@@ -1,0 +1,120 @@
+/* components/button.wxss */
+
+.n-button{
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1rpx solid;
+  position: relative;
+  margin: 2rpx;
+  font-weight: 100;
+}
+.n-button::after, .n-button::before{
+  border: 1rpx solid;
+  border-radius: inherit;
+}
+.success, .success::before, .success::after {
+  background-color: var(--success);
+  border-color: var(--success);
+}
+.success-plain{
+  background-color: var(--success-light);
+  color: var(--success);
+}
+.danger, .danger::before, .danger::after {
+  background-color: var(--danger);
+  border-color: var(--danger);
+}
+.danger-plain{
+  background-color: var(--danger-light);
+  color: var(--danger);
+}
+.default, .default::before, .default::after{
+  background-color: var(--default);
+  border-color: var(--default);
+}
+.default-plain{
+  background-color: var(--default-light);
+  color: var(--default);
+}
+.warning, .warning::before, .warning::after{
+  background-color: var(--warning);
+  border-color: var(--warning);
+}
+.warning-plain{
+  background-color: var(--warning-light);
+  color: var(--warning);
+}
+.primary, .primary::before, .primary::after{
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+.primary-plain{
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+.disabled{
+  opacity: .4;
+}
+
+.isTouch{
+  opacity: .5;
+  transition: all 0.1s;
+}
+
+.isBreath {
+  animation: OpacityBreath 2s ease-in-out infinite;
+}
+.isWave{
+  overflow: visible;
+}
+
+.isWave::before, .isWave::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.isWave::before {
+  animation: Wave 1.1s ease-in-out infinite;
+}
+.isWave::after {
+  animation: Wave 1.1s ease-in-out infinite;
+}
+
+@keyframes OpacityBreath {
+  0% {
+    opacity: 0.7;
+  }
+
+  25% {
+    opacity: 0.8;
+  }
+
+  50% {
+      opacity: 1;
+  }
+
+  75% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes Wave {
+  0% {
+    transform: scale(1);
+    opacity: .3;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

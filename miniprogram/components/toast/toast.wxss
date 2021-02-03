@@ -1,0 +1,59 @@
+/* components/toast/toast.wxss */
+.toast{
+  min-width: 200rpx;
+  max-width: 700rpx;
+  min-height: 68rpx;
+  box-sizing: border-box;
+  padding: 20rpx;
+  border-radius: 15rpx;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: auto;
+  color: #fff;
+  border: 1rpx solid;
+  text-align: center;
+  z-index: 999;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+}
+.icon{
+  margin-right: 10rpx;
+}
+.bottom{
+  bottom: 100rpx;
+}
+.top{
+  top: 100rpx;
+}
+.center{
+  top: 50%;
+  transform: translateY(-50%);
+}
+.success{
+  background-color: var(--success-light);
+  border-color: var(--success);
+  color: var(--success);
+}
+.danger{
+  background-color: var(--danger-light);
+  border-color: var(--danger);
+  color: var(--danger);
+}
+.default{
+  background-color: var(--default-light);
+  border-color: var(--default);
+  color: var(--default);
+}
+.warning{
+  background-color: var(--warning-light);
+  border-color: var(--warning);
+  color: var(--warning);
+}
+.primary{
+  background-color: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--primary);
+}

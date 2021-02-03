@@ -1,0 +1,15 @@
+<!--components/button.wxml-->
+<button
+  class="n-button {{type}} {{className}}  {{ disabled ? 'disabled' : ''}} {{plain ? class : ''}} {{plain ? 'plain' : ''}} {{isTouch ? 'isTouch' : ''}} {{breath ? 'isBreath' : ''}} {{wave ? 'isWave' : ''}} "
+  size="{{size}}"
+  loading="{{loading}}"
+  hover-class="{{hoverClass}}"
+  open-type="{{openType}}"
+  style="border-radius: {{ radius }}"
+  bindtouchstart="onTouch"
+  bindtouchend="onTouch"
+>
+  <slot name='left'></slot>
+  <slot></slot>
+  <slot name='right'></slot>
+</button>
