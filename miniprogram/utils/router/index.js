@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var promission_1 = require("./promission");
+var permission_1 = require("./permission");
 var RouteType;
 (function (RouteType) {
     RouteType["ST"] = "switchTab";
@@ -83,5 +83,5 @@ var Router = (function () {
     return Router;
 }());
 var router = new Router();
-promission_1.setupRouter(router);
+permission_1.setupRouter(router);
 exports.default = router;

@@ -1,4 +1,4 @@
-import { setupRouter } from './promission'
+import { setupRouter } from './permission'
 
 export enum RouteType {
   ST = 'switchTab',
