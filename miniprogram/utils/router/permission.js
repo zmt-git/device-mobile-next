@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var index_1 = require("./index");
 var app_1 = require("../app/app");
-var useToast_1 = require("../../handler/useToast");
 var myRoutes = app_1.getGlobalData('routes');
 function setupRouter(router) {
     router.beforeEnter(function (to, from, next) {
@@ -12,11 +11,8 @@ function setupRouter(router) {
         else {
             var route = router.constructRoute(from);
             next(index_1.RouteType.RL, route);
-            useToast_1.showToast({
-                message: '您还没有该权限',
-                type: 'warning',
-            });
         }
     });
 }
 exports.setupRouter = setupRouter;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGVybWlzc2lvbi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbInBlcm1pc3Npb24udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSxpQ0FBbUM7QUFDbkMsa0NBQTBDO0FBRTFDLElBQU0sUUFBUSxHQUFVLG1CQUFhLENBQUMsUUFBUSxDQUFDLENBQUE7QUFFL0MsU0FBZ0IsV0FBVyxDQUFFLE1BQWlCO0lBQzVDLE1BQU0sQ0FBQyxXQUFXLENBQUMsVUFBQyxFQUFVLEVBQUUsSUFBWSxFQUFFLElBQWM7UUFDMUQsSUFBSSxRQUFRLENBQUMsUUFBUSxDQUFDLEVBQUUsQ0FBQyxFQUFFO1lBQ3pCLElBQUksRUFBRSxDQUFBO1NBQ1A7YUFBTTtZQUNMLElBQU0sS0FBSyxHQUFHLE1BQU0sQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLENBQUE7WUFFekMsSUFBSSxDQUFDLGlCQUFTLENBQUMsRUFBRSxFQUFFLEtBQUssQ0FBQyxDQUFBO1NBTTFCO0lBQ0gsQ0FBQyxDQUFDLENBQUE7QUFDSixDQUFDO0FBZkQsa0NBZUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBSb3V0ZXJPYmogfSBmcm9tICcuL2luZGV4J1xyXG5pbXBvcnQgeyBSb3V0ZVR5cGUgfSBmcm9tICcuL2luZGV4J1xyXG5pbXBvcnQgeyBnZXRHbG9iYWxEYXRhIH0gZnJvbSAnLi4vYXBwL2FwcCdcclxuLy8gaW1wb3J0IHsgc2hvd1RvYXN0IH0gZnJvbSAnLi4vLi4vaGFuZGxlci91c2VUb2FzdCcgXHJcbmNvbnN0IG15Um91dGVzOiBhbnlbXSA9IGdldEdsb2JhbERhdGEoJ3JvdXRlcycpXHJcblxyXG5leHBvcnQgZnVuY3Rpb24gc2V0dXBSb3V0ZXIgKHJvdXRlcjogUm91dGVyT2JqKSB7XHJcbiAgcm91dGVyLmJlZm9yZUVudGVyKCh0bzogc3RyaW5nLCBmcm9tOiBzdHJpbmcsIG5leHQ6IEZ1bmN0aW9uKSA9PiB7XHJcbiAgICBpZiAobXlSb3V0ZXMuaW5jbHVkZXModG8pKSB7XHJcbiAgICAgIG5leHQoKVxyXG4gICAgfSBlbHNlIHtcclxuICAgICAgY29uc3Qgcm91dGUgPSByb3V0ZXIuY29uc3RydWN0Um91dGUoZnJvbSlcclxuICBcclxuICAgICAgbmV4dChSb3V0ZVR5cGUuUkwsIHJvdXRlKVxyXG4gICAgICBcclxuICAgICAgLy8gc2hvd1RvYXN0KHtcclxuICAgICAgLy8gICBtZXNzYWdlOiAn5oKo6L+Y5rKh5pyJ6K+l5p2D6ZmQJyxcclxuICAgICAgLy8gICB0eXBlOiAnd2FybmluZycsXHJcbiAgICAgIC8vIH0pXHJcbiAgICB9XHJcbiAgfSlcclxufVxyXG4iXX0=

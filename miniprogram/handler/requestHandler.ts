@@ -3,6 +3,7 @@ import { setToken, removeToken } from '../utils/auth/auth'
 import Socket from '../utils/http/ws'
 import { getGlobalData, setGlobalData } from '../utils/app/app'
 import router, { RouteType } from '../utils/router/index'
+import { showToast } from './useToast'
 
 /**
  * @description 设置公共变量
@@ -68,6 +69,9 @@ export function loginCodeHandler (successFn?: Function) {
  */
 export function errorHandler (res: WechatMiniprogram.UploadFileSuccessCallbackResult |  WechatMiniprogram.RequestSuccessCallbackResult) {
   if (getGlobalData('isLogining')) return
+  const data = res.data as ResponseOpt
+  showToast({ message: data.msg, type: 'danger'})
+
 	if (res.statusCode === 401) {
     setGlobalLoginData(false, true)
     loginCodeHandler()

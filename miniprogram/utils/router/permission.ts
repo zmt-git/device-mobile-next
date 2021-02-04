@@ -1,7 +1,7 @@
 import { RouterObj } from './index'
 import { RouteType } from './index'
 import { getGlobalData } from '../app/app'
-import { showToast } from '../../handler/useToast' 
+// import { showToast } from '../../handler/useToast' 
 const myRoutes: any[] = getGlobalData('routes')
 
 export function setupRouter (router: RouterObj) {
@@ -13,10 +13,10 @@ export function setupRouter (router: RouterObj) {
   
       next(RouteType.RL, route)
       
-      showToast({
-        message: '您还没有该权限',
-        type: 'warning',
-      })
+      // showToast({
+      //   message: '您还没有该权限',
+      //   type: 'warning',
+      // })
     }
   })
 }
