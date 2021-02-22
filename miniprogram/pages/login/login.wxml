@@ -10,5 +10,6 @@
     <input id="password" bindinput="bindinput" type="password" placeholder="请输入密码" />
     <view wx:if="{{passwordMsgShow}}">密码不能为空</view>
   </label>
-  <button disabled="{{disabled}}" bindtap="submit">登录</button>
+  <n-button plain disabled="{{disabled}}" bindtap="submit">登录</n-button>
+  <n-toast/>
 </view>

@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "n-button": "../../components//NButton/NButton",
+    "n-toast": "../../components/NToast/NToast"
+  }
 }

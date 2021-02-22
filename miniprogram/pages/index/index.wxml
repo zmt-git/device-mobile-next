@@ -1,26 +1,17 @@
 <!--index.wxml-->
 <view class="index">
   <view class="btn-box">
-    <!-- <n-button
-      type='primary'
-      bindtap="toLogin"
-    >
-      登录
-    </n-button> -->
-
-    <n-button size='mini' type='success' bindtap="animation" id="success">success</n-button>
-    <n-button size='mini' type='danger' bindtap="animation" id="danger">danger</n-button>
-    <n-button size='mini' type='default' bindtap="animation" id="default">default</n-button>
-    <n-button size='mini' type='warning' bindtap="animation" id="warning">warning</n-button>
-    <n-button size='mini' type='primary' bindtap="animation" id="primary">primary</n-button>
-    <n-button size='mini' type='success' plain bindtap="animation" id="success">success</n-button>
-    <n-button size='mini' type='danger' plain bindtap="animation" id="danger">danger</n-button>
-    <n-button size='mini' type='default' plain bindtap="animation" id="default">default</n-button>
-    <n-button size='mini' type='warning' plain bindtap="animation" id="warning">warning</n-button>
-    <n-button size='mini' type='primary' plain bindtap="animation" id="primary">primary</n-button>
-
+    <n-button type='primary' bindtap="toLogin">登录</n-button>
+    <!-- <n-button type='success' bindtap="animation" id="success">登录</n-button>
+    <n-button type='danger' bindtap="animation" id="danger">登录</n-button>
+    <n-button type='default' bindtap="animation" id="default">登录</n-button>
+    <n-button type='warning' bindtap="animation" id="warning">登录</n-button>
+    <n-button type='primary' bindtap="animation" id="primary">登录</n-button>
+    <n-button type='success' plain bindtap="animation" id="success">登录</n-button>
+    <n-button type='danger' plain bindtap="animation" id="danger">登录</n-button>
+    <n-button type='default' plain bindtap="animation" id="default">登录</n-button>
+    <n-button type='warning' plain bindtap="animation" id="warning">登录</n-button>
+    <n-button type='primary' plain bindtap="animation" id="primary">登录</n-button> -->
   </view>
-  <n-toast defaultIcon="{{true}}">
-  </n-toast>
-
+  <n-toast />
 </view>

@@ -12,7 +12,7 @@ Component({
     },
     defaultIcon: {
       type: Boolean,
-      value: false
+      value: true
     }
   },
 

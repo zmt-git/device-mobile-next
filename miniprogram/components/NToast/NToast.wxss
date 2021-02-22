@@ -1,6 +1,6 @@
 /* components/toast/toast.wxss */
 .toast{
-  min-width: 200rpx;
+  min-width: 100rpx;
   max-width: 700rpx;
   min-height: 68rpx;
   box-sizing: border-box;

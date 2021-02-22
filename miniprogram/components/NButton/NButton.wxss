@@ -1,7 +1,7 @@
 /* components/button.wxss */
 
 .n-button{
-  color: white;
+  color: white!important;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -16,44 +16,44 @@
   border-radius: inherit;
 }
 .success, .success::before, .success::after {
-  background-color: var(--success);
-  border-color: var(--success);
+  background-color: var(--success)!important;
+  border-color: var(--success)!important;
 }
 .success-plain{
-  background-color: var(--success-light);
-  color: var(--success);
+  background-color: var(--success-light)!important;
+  color: var(--success)!important;
 }
 .danger, .danger::before, .danger::after {
-  background-color: var(--danger);
-  border-color: var(--danger);
+  background-color: var(--danger)!important;
+  border-color: var(--danger)!important;
 }
 .danger-plain{
-  background-color: var(--danger-light);
-  color: var(--danger);
+  background-color: var(--danger-light)!important;
+  color: var(--danger)!important;
 }
 .default, .default::before, .default::after{
-  background-color: var(--default);
-  border-color: var(--default);
+  background-color: var(--default)!important;
+  border-color: var(--default)!important;
 }
 .default-plain{
   background-color: var(--default-light);
-  color: var(--default);
+  color: var(--default)!important;
 }
 .warning, .warning::before, .warning::after{
-  background-color: var(--warning);
-  border-color: var(--warning);
+  background-color: var(--warning)!important;
+  border-color: var(--warning)!important;
 }
 .warning-plain{
-  background-color: var(--warning-light);
-  color: var(--warning);
+  background-color: var(--warning-light)!important;
+  color: var(--warning)!important;
 }
 .primary, .primary::before, .primary::after{
-  background-color: var(--primary);
-  border-color: var(--primary);
+  background-color: var(--primary)!important;
+  border-color: var(--primary)!important;
 }
 .primary-plain{
-  background-color: var(--primary-light);
-  color: var(--primary);
+  background-color: var(--primary-light)!important;
+  color: var(--primary)!important;
 }
 .disabled{
   opacity: .4;

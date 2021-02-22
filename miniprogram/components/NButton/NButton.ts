@@ -78,6 +78,7 @@ Component({
 
   methods: {
     onTouch (e) {
+      if (this.properties.disabled) return
       if (e.type === 'touchstart') {
         this.setData({
           isTouch: true

@@ -6,6 +6,7 @@ App({
     socket: null,
     routes: [
       '/pages/index/index',
+      '/pages/login/login'
     ]
   }
 })

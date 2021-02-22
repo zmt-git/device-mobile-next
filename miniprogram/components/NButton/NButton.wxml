@@ -8,6 +8,7 @@
   style="border-radius: {{ radius }}"
   bindtouchstart="onTouch"
   bindtouchend="onTouch"
+  disabled="{{disabled}}"
 >
   <slot name='left'></slot>
   <slot></slot>
