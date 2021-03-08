@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "n-button": "../../components/button/button"
+    "n-button": "../../components/NButton/NButton"
   }
 }

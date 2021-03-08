@@ -36,7 +36,7 @@
   border-color: var(--default)!important;
 }
 .default-plain{
-  background-color: var(--default-light);
+  background-color: var(--default-light)!important;
   color: var(--default)!important;
 }
 .warning, .warning::before, .warning::after{
