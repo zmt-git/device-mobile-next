@@ -9,6 +9,7 @@
     "noImplicitThis": true,
     "noImplicitReturns": true,
     "alwaysStrict": true,
+    "sourceMap": true,
     "inlineSourceMap": true,
     "inlineSources": true,
     "noFallthroughCasesInSwitch": true,
@@ -21,7 +22,12 @@
     "lib": ["es5", "ES6", "es2017"],
     "typeRoots": [
       "./typings"
-    ]
+    ],
+    "baseUrl": ".",
+    "types": ["miniprogram-api-typings"],
+    "paths": {
+      "@vant/weapp/*": ["path/to/node_modules/@vant/weapp/dist/*"]
+    },
   },
   "include": [
     "./**/*.ts"

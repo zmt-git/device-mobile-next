@@ -1,15 +1,39 @@
 <!--miniprogram/pages/login/login.wxml-->
 <view class="login">
-  <label>
-    <text>用户名</text>
-    <input id='username' bindinput="bindinput" placeholder="请输入用户名"/>
-    <view wx:if="{{usernameMsgShow}}">用户名不能为空</view>
-  </label>
-  <label>
-    <text>密码</text>
-    <input id="password" bindinput="bindinput" type="password" placeholder="请输入密码" />
-    <view wx:if="{{passwordMsgShow}}">密码不能为空</view>
-  </label>
-  <n-button plain disabled="{{disabled}}" bindtap="submit">登录</n-button>
+  <!-- 登录背景 -->
+  <image class="login-bg" mode='widthFix' src="../../static/images/login/logoBg.png"></image>
+  <!-- 登录表单 -->
+  <view class="login-container flex-column-algin-center">
+    <text class="login-container_title">登录</text>
+    <van-field
+      clearable
+      auto-focus
+      left-icon='manager'
+      placeholder="请输入用户名"
+      custom-style='width: 500rpx'
+      cursor-spacing='180'
+      model:value="{{ username }}"
+      bind:change='onChange'
+    />
+    <van-field
+      clearable
+      type='password'
+      left-icon='lock'
+      placeholder="请输入密码"
+      custom-style='width: 500rpx'
+      cursor-spacing='140'
+      model:value="{{ password }}"
+      bind:change='onChange'
+    />
+    <van-button
+      bind:click="submit"
+      round
+      type="info"
+      custom-style='margin-top: 70rpx; width: 440rpx'
+      disabled='{{disabled}}'
+    >
+      登录
+    </van-button>
+  </view>
   <n-toast/>
 </view>

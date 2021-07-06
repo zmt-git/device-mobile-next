@@ -1,6 +1,13 @@
 import request from '../../utils/http/request'
 
 // POST /deviceInfoManager/page 分页查询设备信息
+
+interface PageOpt {
+  size: number
+  current: number
+  [propName: string]: any
+}
+
 export function getDeviceList (data: PageOpt) {
   return request({
     url: '/deviceInfoManager/page',

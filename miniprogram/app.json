@@ -22,7 +22,12 @@
       }
     ]
   },
-  "style": "v2",
+  "usingComponents": {
+    "n-toast": "./components/NToast/NToast",
+    "van-button": "@vant/weapp/button/index",
+    "van-transition": "@vant/weapp/transition/index",
+    "van-field": "@vant/weapp/field/index"
+  },
   "sitemapLocation": "sitemap.json",
   "darkmode": true
 }

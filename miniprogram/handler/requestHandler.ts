@@ -25,7 +25,7 @@ export function eHandler () {
   getGlobalData('socket') && getGlobalData('socket').socket.close()
 }
 
-/**s
+/**
  * @description 登录成功处理
  */
 export function sHandler (res: any) {
@@ -50,7 +50,6 @@ export function loginCodeHandler (successFn?: Function) {
           successFn && successFn()
         })
         .catch(e => {
-          console.log(e)
           eHandler()
         })
       wx.hideLoading()
@@ -69,7 +68,9 @@ export function loginCodeHandler (successFn?: Function) {
  */
 export function errorHandler (res: WechatMiniprogram.UploadFileSuccessCallbackResult |  WechatMiniprogram.RequestSuccessCallbackResult) {
   if (getGlobalData('isLogining')) return
+
   const data = res.data as ResponseOpt
+
   showToast({ message: data.msg, type: 'danger'})
 
 	if (res.statusCode === 401) {

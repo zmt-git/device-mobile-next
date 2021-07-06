@@ -1,11 +1,3 @@
 <!--miniprogram/pages/mine/mine.wxml-->
 <view class="mine">
-  <n-button
-    type='default'
-    bindtap="toIndex"
-    wave='{{true}}'
-    className="r"
-  >
-    to index
-  </n-button>
 </view>

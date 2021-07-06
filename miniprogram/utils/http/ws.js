@@ -26,7 +26,7 @@ var Socket = (function () {
         get: function () {
             return Socket._isConnect;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Socket.prototype.createWs = function () {

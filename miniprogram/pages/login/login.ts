@@ -1,21 +1,14 @@
 import { login } from '../../api/login/index'
 import { sHandler } from '../../handler/requestHandler'
 
-const reg: RegObj = {
-  username: /\S/,
-  password: /\S/
-}
-
 Page({
   data: {
+    password: '',
+    username: '',
     form: {
-      password: '',
-      username: '',
       uuid: '',
       type: 1
     },
-    usernameMsgShow: false, 
-    passwordMsgShow: false,
     disabled: true
   },
 
@@ -26,32 +19,12 @@ Page({
     app.globalData.socket && app.globalData.socket.socket.close()
   },
 
-  setDisabled () {
-    let result = true
-    if (reg.username.test(this.data.form.username)
-     && reg.password.test(this.data.form.password)
-    ) {
-      result = false
+  onChange () {
+    if (!this.data.password || !this.data.username) {
+      this.setData({ disabled: true })
     } else {
-      result = true
+      this.setData({ disabled: false })
     }
-    this.setData({
-      disabled: result
-    })
-  },
-
-  bindinput (e: any) {
-    const key: 'password' | 'username' = e.target.id
-    const keys = `form.${key}`
-    this.setData({
-      [keys]: e.detail.value
-    })
-
-    this.setData({
-      [`${key}MsgShow`]: !reg[key].test(this.data.form[key])
-    })
-
-    this.setDisabled()
   },
 
   submit () {
@@ -62,7 +35,7 @@ Page({
         _this.setData({
           'form.uuid': res.code
         })
-        await login(_this.data.form)
+        await login({..._this.data.form, username: _this.data.username, password: _this.data.password})
           .then(res => {
             sHandler(res)
           })

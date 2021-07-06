@@ -1,6 +1,8 @@
 {
   "usingComponents": {
-    "n-button": "../../components//NButton/NButton",
     "n-toast": "../../components/NToast/NToast"
-  }
+  },
+  "navigationBarBackgroundColor": "#439df0",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "登录"
 }
